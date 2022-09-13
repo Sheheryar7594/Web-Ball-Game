@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Game</title>
+    <link rel="stylesheet" href="./ball_game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Shrikhand&family=Six+Caps&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="gameOver" id="gameOver">
+            <div class="finalScore">
+                <div class="animateGame">
+                    <h2 >Game Over</h2>
+                </div>
+                <!-- <h3>Your Score is <span id="gameOver">15</span></h3> -->
+            </div>
+                
+        </div>
+        <div class="game">
+           <div class="gameOverBox">
+            <div class="colorBox">
+                <div onClick="choose();" class="changeColor" id="changeColor">
+                    <h2 >Change</h2>
+                </div>
+                <div class="displayColor">
+                    <h2 id="displayColor"></h2>
+                </div>
+            </div>
+            <div class="square">
+            
+                <div class="outerCircles">
+                    <ul>
+                        <li id="0" onClick="choosing(this.id)" style="--i:0;"></li>
+                        <li id="1" onClick="choosing(this.id)" style="--i:1;"></li>
+                        <li id="2" onClick="choosing(this.id)" style="--i:2;"></li>
+                        <li id="3" onClick="choosing(this.id)" style="--i:3;"></li>
+                    
+                    </ul>
+                </div>
+                <div class="outerCircles">
+                    <ul>
+                        <li id="4" onClick="choosing(this.id)" style="--i:4"></li>
+                        <li id="5" onClick="choosing(this.id)" style="--i:5"></li>
+                        <li id="6" onClick="choosing(this.id)" style="--i:6"></li>
+                        <li id="7" class="bad_girls" onClick="choosing(this.id)" style="--i:7"></li>
+                    </ul>
+                </div>
+                <div class="outerCircles">
+                    <ul>
+                        <li id="8" onClick="choosing(this.id)" style="--i:8"></li>
+                        <li id="9" onClick="choosing(this.id)" style="--i:9"></li>
+                        <li id="10" onClick="choosing(this.id)"  style="--i:10"></li>
+                        <li id="11" onClick="choosing(this.id)"  style="--i:11"></li>
+                    </ul>
+                </div>
+                <div class="outerCircles">
+                    <ul>
+                        <li id="12" onClick="choosing(this.id)" style="--i:12"></li>
+                        <li id="13" onClick="choosing(this.id)" style="--i:13"></li>
+                        <li id="14" onClick="choosing(this.id)" style="--i:14"></li>
+                        <li id="15" onClick="choosing(this.id)" style="--i:15"></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="box">
+                <div  class="restart" id="restart">
+                    <h2  id="restart">Start</h2>
+                </div>
+                <!-- <div class="time" id="time">
+                    <h2 id="times"></h2>
+                </div> -->
+            </div>
+            </div>
+        </div>
+            
+
+        <div class="score">
+            <div class="scoreValue">
+                <h2 id="score">
+                </h2>
+            </div>
+            <div class="yourScore">
+                <h2> Your Score </h2>
+            </div>
+            <div class="timer" id="timer">
+                <h2 id="time"></h2>
+            </div>
+        </div>
+    </header>
+    <script src="ballGame.js"></script>
+</body>
+</html>

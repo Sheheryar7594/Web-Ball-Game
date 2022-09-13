@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html
+{
+    font-size: 62.5%;   
+    /*62.5% of 16px is 10px means now 1rem is 10px*/
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.game
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.square
+{
+    height: 51.5em;
+    width: 50rem;
+    border: 2px solid white;
+    border-radius: 4rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem,1fr));
+    grid-gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.square  .outerCircles
+{
+    border: 2px solid white;
+    height: 20.55rem;
+    border-radius: 50%;
+    margin: 1rem;
+    position: relative;
+    animation: rotateColors 5s linear infinite;
+    
+}
+.square  .outerCircles ul
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square  .outerCircles ul li
+{
+    position: absolute;
+    border: 2px solid white;
+    top: -2rem;
+    left: 10rem;
+    rotate: -17deg;
+    transform-origin: 0 12rem;
+    transform: rotate(calc(90deg  * var(--i)));
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    list-style: none;
+    z-index: 1000;
+    /* cursor: pointer; */
+}
+/* .square  .outerCircles ul li:nth-child(1)
+{
+    background-color: black;
+} */
+@keyframes rotateColors {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    25%
+    {
+        transform: rotate(180deg);
+    }
+    50%
+    {
+        transform: rotate(90deg);
+
+    } 
+    75%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+
+}
+/* header
+{
+    border: 2px solid white;
+} */
+header .colorBox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 65%;
+}
+header .colorBox .changeColor
+{
+    border: 2px solid white;
+    height: 5rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    border-radius: 5rem;
+    box-shadow:  0px 0px 0.4rem white inset,
+    0px 0px 1rem white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+}
+/* header .colorBox .changeColor:hover
+{
+    box-shadow:  0px 0px 1rem white ,
+    0px 0px 1rem white;
+} */
+
+header .colorBox .displayColor
+{
+    border: 2px solid white;
+    height: 5rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    border-radius: 5rem;
+    box-shadow:  0px 0px 0.4rem white inset,
+    0px 0px 1rem white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    user-select: none;
+}
+header .colorBox .changeColor h2
+{
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+header .colorBox .displayColor h2
+{
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+header .restart
+{
+    border: 2px solid white;
+    height: 5rem;
+    width: 15rem;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    box-shadow:  0px 0px 0.4rem white inset,
+    0px 0px 1rem white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+}
+header .restart h2
+{
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}
+header .restart:hover h2
+{
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+
+header .box
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 65%;
+    user-select: none;
+    /* border: 2px solid white; */
+}
+
+/* header .box .time
+{
+    border: 2px solid white;
+    height: 5rem;
+    width: 15rem;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    box-shadow:  0px 0px 1rem white inset,
+    0px 0px 1rem white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+}
+header .box .time h2
+{
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.block
+{
+    display: block !important;
+} */
+
+header .score
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    /* border: 2px solid white; */
+    justify-content: center;
+    align-items: center
+}
+header .score .timer
+{
+    border: 2px solid white;
+    height: 3.5rem;
+    width: 14rem;
+    display: flex;
+    margin-top: 7rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 10px blue,
+    0px 0px 4px white;
+    text-align: center;
+    justify-content: center;
+    transform: translateY(-7rem);
+    z-index: 1;
+    transition: all 1s ease;
+}
+.displayTimer
+{
+    transform: translateY(0rem) !important;
+}
+header .timer h2
+{
+    color: white;
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-align: center;
+    user-select: none;
+}
+
+header .score .scoreValue
+{
+    background-color: black;
+    border: 2px solid white;
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
+    height: 6rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 8px white inset,
+    0px 0px 2px white ;
+    z-index: 2;
+}
+header .score .scoreValue h2
+{
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+header .score .yourScore
+{
+    border: 2px solid white;
+    height: 5rem;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: -9.2rem;
+    background-color: black;
+    border-radius: 2rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -3px 5px white inset,
+    0px 0px 2px white ;
+    z-index: 3;
+}
+
+header .score .yourScore h2
+{
+    z-index: 100;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    user-select: none;
+    
+}
+.changingTextColor
+{
+    color: aqua;
+    width: 15rem;
+}
+
+
+/* now for gameOver */
+header .game .gameOverBox
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header .gameOver{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 51.5em;
+    width: 50rem;
+    border: 2px solid rgb(119, 119, 119);
+    box-shadow: 0px 0px 50px white inset;
+    border-radius: 4rem;
+    margin-right: 16rem;
+    z-index: 5000;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    display: none;
+}
+.hideGameOver
+{
+    visibility: hidden;
+}
+header .gameOver .animateGame
+{
+    /* border: 2px solid white; */
+    height: 7rem;
+    width: 29rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .gameOver h2
+{
+    font-size: 5rem;
+    font-weight: 300;
+    user-select: none;
+    font-family: 'Shrikhand', cursive;
+    /* name duration iterations direction speed */
+    animation: gameOver 2s linear 1;
+}
+
+@keyframes gameOver {
+    0%
+    {
+        font-size: 2.5rem;
+    }
+    100%
+    {
+        font-size: 5rem;
+    }
+}
+header .gameOver .finalScore 
+{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+header .gameOver .finalScore .animateGame
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+/* header .gameOver h3
+{
+    font-size: 2rem;
+    font-weight: 300;
+    user-select: none;
+    font-weight: 500;
+}  */
+
